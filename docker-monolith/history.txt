@@ -1,0 +1,78 @@
+  496  sudo ./docker-install.sh 
+  501  sudo docker run hello-world
+  502  docker version
+  503  sudo docker version 
+  504  docker info
+  505  sudo docker info
+  506  docker ps
+  511  sudo groupadd docker
+  512  sudo gpasswd -a $USER docker
+  513  docker info
+  514  docker ps
+  515  reset
+  516  docker ps
+  517  sudo service docker restart
+  518  docker ps
+  519  sudo systemctl status docker.s
+  520  sudo systemctl status docker
+  521  sudo systemctl restart docker
+  522  docker ps
+  523  sudo setfacl -m user:squid:rw /var/run/docker.sock
+  524  docker ps
+  525  cat /var/run/docker.sock 
+  526  docker ps -a
+  527  docker images
+  528  docker run -it ubuntu:16.04 /bin/bash
+  529  docker ps
+  530  docekr images
+  531  docker images
+  532  docker ps -a
+  533  docker run -it --rm ubuntu:16.04 /bin/bash
+  534  docker ps -a
+  535  docker run -it ubuntu:16.04 /bin/bash
+  536  docker ps -a
+  537  docker run d49d7e355caf 
+  538  docker start d49d7e355caf 
+  539  docker ps
+  540  docker attach d49d7e355caf
+  541  docker ps
+  542  docker ps -a
+  543  docker run -it ubuntu:16.04 bash
+  544  docker run -dt nginx:lates
+  545  docker run -dt nginx
+  546  docker ps
+  547  docker system df
+  548  docker ps
+  549  docker attach fa69558839f0
+  550  docker ps
+  551  netstat -tnpa | grep 'ESTABLISHED.*sshd'
+  552  sudo apt install net-tools
+  553  netstat -tnpa | grep 'ESTABLISHED.*sshd'
+  554  sudo netstat -tnpa | grep 'ESTABLISHED.*sshd'
+  555  docker ps
+  556  docker exec -ti fa69558839f0 bash
+  557  docker ps
+  558  docker exec -ti fa69558839f0 bash
+  559  docker commit fa69558839f0 tryimage/nginx-tmp-file
+  560  docker images 
+  561  docker images >> docker-1.log
+  562  cat docker-1.log 
+  563  docker inspect fa69558839f0
+  564  docker images 
+  565  docker inspect 678fc058f958
+  566  docker ps
+  567  docker ps -q fa69558839f0
+  568  docker ps -q
+  569  ll
+  570  docker ps
+  571  docker images ls
+  572  docker images ls -a
+  573  docker image ls
+  574  docker container ls
+  575  docker stop fa69558839f0
+  576  docker container ls
+  577  docker rm $(docker container ls -a -q)
+  578  docker container ls
+  579  docker image ls
+  580  docker rmi $(docker image ls -q)
+  581  docker image ls

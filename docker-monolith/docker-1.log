@@ -1,0 +1,5 @@
+REPOSITORY                TAG                 IMAGE ID            CREATED             SIZE
+tryimage/nginx-tmp-file   latest              678fc058f958        43 seconds ago      132MB
+ubuntu                    16.04               330ae480cb85        4 days ago          125MB
+nginx                     latest              2622e6cca7eb        12 days ago         132MB
+hello-world               latest              bf756fb1ae65        5 months ago        13.3kB
