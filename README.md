@@ -1,4 +1,11 @@
 # DevOps practice: Microservice architecture
+docker-2
+
+- Установка docker-machine 
+- Создание окружения docker host на платформе GCP
+- Работа с Dockerfile
+- Сборка своего образа reddit (puma, mongodb)  
+
 
 docker-1
 
@@ -27,4 +34,3 @@ docker system df # Отображает сколько дискового про
 rm # удаляет контейнер; rmi # удаляет image
 docker rm $(docker ps -a -q) # удалит все незапущенные контейнеры
 docker ps --filter "status=exited" # выводит список остановленных контейнеров
-
