@@ -1,10 +1,17 @@
 # DevOps practice: Microservice architecture
+docker-3
+
+- Запуск и работа приложения на основе Docker-образов
+- Приложение состоит из нескольких компонентов
+- Оптимизация работы Docker-образов, использование меньшее количество слоёв 
+
+
 docker-2
 
 - Установка docker-machine 
 - Создание окружения docker host на платформе GCP
 - Работа с Dockerfile
-- Сборка своего образа reddit (puma, mongodb)  
+- Сборка своего образа reddit (ruby, puma, mongodb) Монолит 
 
 
 docker-1
