@@ -1,4 +1,5 @@
 #!/bin/bash
+# this will install docker-machine binary
 set -e
 
 base=https://github.com/docker/machine/releases/download/v0.16.0 &&
