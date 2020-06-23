@@ -5,3 +5,25 @@ sshrom/post         1.0                 af4cb518e4bb        5 minutes ago       
 mongo               latest              2b2cc1f48aed        6 days ago          388MB
 ruby                2.2                 6c8e6f9667b2        2 years ago         715MB
 python              3.6.0-alpine        cb178ebbf0f2        3 years ago         88.6MB
+
+REPOSITORY          TAG                 IMAGE ID            CREATED              SIZE
+sshrom/ui           2.0                 7cd828da46aa        About a minute ago   58.7MB
+sshrom/ui           1.0                 22d5e20b9a5f        29 minutes ago       770MB
+sshrom/comment      1.0                 353262681c96        29 minutes ago       768MB
+sshrom/post         1.0                 af4cb518e4bb        30 minutes ago       110MB
+mongo               latest              2b2cc1f48aed        6 days ago           388MB
+alpine              3.7                 6d1ef012b567        15 months ago        4.21MB
+ruby                2.2                 6c8e6f9667b2        2 years ago          715MB
+python              3.6.0-alpine        cb178ebbf0f2        3 years ago          88.6MB
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+sshrom/comment      2.0                 c04f0819ef00        14 seconds ago      55.9MB
+sshrom/post         2.0                 0876b45c5bdc        4 minutes ago       106MB
+sshrom/ui           2.0                 7cd828da46aa        8 minutes ago       58.7MB
+sshrom/ui           1.0                 22d5e20b9a5f        35 minutes ago      770MB
+sshrom/comment      1.0                 353262681c96        36 minutes ago      768MB
+sshrom/post         1.0                 af4cb518e4bb        37 minutes ago      110MB
+mongo               latest              2b2cc1f48aed        6 days ago          388MB
+alpine              3.7                 6d1ef012b567        15 months ago       4.21MB
+ruby                2.2                 6c8e6f9667b2        2 years ago         715MB
+python              3.6.0-alpine        cb178ebbf0f2        3 years ago         88.6MB
