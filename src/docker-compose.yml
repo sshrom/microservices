@@ -1,31 +1,38 @@
 version: '3.3'
 services:
-  post_db:
-    image: mongo:3.2
+  mongo_db:
+    image: mongo:${MONGO_VERSION}
     volumes:
-      - post_db:/data/db
+      - post_db:${MONGO_DB_DIR}
     networks:
-      - reddit
+      back_net:
+        aliases:
+          - post_db
+          - comment_db
   ui:
     build: ./ui
-    image: ${USERNAME}/ui:2.0
+    image: ${DOCKERHUB_USERNAME}/ui:${IMG_VERSION}
     ports:
-      - 9292:9292/tcp
+      - ${PUMA_PORT}:${PUMA_PORT}/tcp
     networks:
-      - reddit
+      - front_net
   post:
     build: ./post-py
-    image: ${USERNAME}/post:2.0
+    image: ${DOCKERHUB_USERNAME}/post:${IMG_VERSION}
     networks:
-      - reddit
+      - back_net
+      - front_net
   comment:
     build: ./comment
-    image: ${USERNAME}/comment:2.0
+    image: ${DOCKERHUB_USERNAME}/comment:${IMG_VERSION}
     networks:
-      - reddit
+      - back_net
+      - front_net
 
 volumes:
   post_db:
 
 networks:
-  reddit:
+  back_net:
+  front_net:
+  
