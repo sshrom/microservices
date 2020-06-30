@@ -1,4 +1,4 @@
-#! /bin//bash
+#! /bin/bash
 # run 4 containers (v 2.0)
 docker network create reddit
 

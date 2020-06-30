@@ -1,4 +1,10 @@
 # DevOps practice: Microservice architecture
+docker-4
+
+- Работа с сетями в Docker
+- Использование инструмента docker-compose
+
+
 docker-3
 
 - Запуск и работа приложения на основе Docker-образов
