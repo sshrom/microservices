@@ -56,7 +56,7 @@ production:
   only:
     - /^\d+\.\d+\.\d+/
   script:
-    - echo "Deploy to production"
+    - echo "Deploy to production!"
   environment:
     name: production
     url: https://example.com
