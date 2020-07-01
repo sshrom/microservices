@@ -1,4 +1,10 @@
 # DevOps practice: Microservice architecture
+
+monitoring-1
+
+- prometheus: запуск, конфигурация, знакомство с web ui
+- Мониторинг состояния микросервисов
+
 github-ci-1
 
 - Инсталляцию Gitlab CI (Omnibus) на GCE в Docker-контейнер
