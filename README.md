@@ -1,4 +1,13 @@
 # DevOps practice: Microservice architecture
+github-ci-1
+
+- Инсталляцию Gitlab CI (Omnibus) на GCE в Docker-контейнер
+- Установка и регистрация runner
+- Подготовка репозитория с кодом приложения (reddit)
+- Опиание этапов пайплайна gitlab-ci.yml
+- Определение окружения
+
+
 docker-4
 
 - Работа с сетями в Docker

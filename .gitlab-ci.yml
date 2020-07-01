@@ -1,60 +1,43 @@
+image: ruby:2.4.2
+
 stages:
   - build
   - test
   - review
   - stage
-  - prod
-
+  - production
 
 variables:
-  DATABASE_URL: 'mongodb://mongo/user_posts'
-  DOCKER_HOST: tcp://docker:2375/
-  DOCKER_DRIVER: overlay2
-  DOCKER_TLS_CERTDIR: ""
+  DATABASE_URL: "mongodb://mongo/user_posts"
 
-
-services:
-  - docker:dind
-
+before_script:
+  - cd reddit
+  - bundle install
 
 build_job:
   stage: build
   script:
     - echo 'Building'
-    - docker info
-    - docker login -u $CI_REGISTRY_USER -p "$CI_REGISTRY_PASS" $CI_REGISTRY
-    - cd reddit
-    - docker build -t $CI_REGISTRY_USER/reddit-app-did .
-    - docker push $CI_REGISTRY_USER/reddit-app-did
-  tags:
-    - docker
 
 test_unit_job:
   stage: test
   services:
     - mongo:latest
-  image: ruby:2.4.2
   script:
-    - echo 'Test'
-    - cd reddit
-    - bundle install
     - ruby simpletest.rb
-  tags:
-  - docker
+
+test_integration_job:
+  stage: test
+  script:
+    - echo 'Testing 2'
 
 deploy_dev_job:
   stage: review
-  services:
-    - docker:dind
   script:
     - echo 'Deploy'
-    - docker info
-    - docker run --name reddit -d -p 9292:9292 $CI_REGISTRY_USER/reddit-app-did
   environment:
     name: dev
-    url: http://35.233.44.219:9292
-  tags:
-  - docker
+    url: http://dev.example.com
 
 branch review:
   stage: review
@@ -63,34 +46,28 @@ branch review:
     name: branch/$CI_COMMIT_REF_NAME
     url: http://$CI_ENVIRONMENT_SLUG.example.com
   only:
-    - branches
+  - branches
   except:
-    - master
-  tags:
-    - docker
+  - master
 
 staging:
   stage: stage
   when: manual
   only:
-    - /^[0-9]+\.[0-9]+\.[0-9]+/
+    - /^\d+\.\d+\.\d+/
   script:
-    - echo 'Deploy'
+    - echo "Deploy to stage"
   environment:
     name: stage
     url: https://beta.example.com
-  tags:
-   - docker
 
 production:
-  stage: prod
+  stage: production
   when: manual
   only:
-    - /^[0-9]+\.[0-9]+\.[0-9]+/
+    - /^\d+\.\d+\.\d+/
   script:
-    - echo 'Deploy'
+    - echo "Deploy to production!!"
   environment:
     name: production
     url: https://example.com
-  tags:
-   - docker
