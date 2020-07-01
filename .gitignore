@@ -1,2 +1,3 @@
 .odds
 Dockerfile.*
+gitlab-ci/infra
