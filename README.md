@@ -4,6 +4,7 @@ monitoring-1
 
 - prometheus: запуск, конфигурация, знакомство с web ui
 - Мониторинг состояния микросервисов
+- node-exporter для сбора информации Docker-хоста
 
 github-ci-1
 
