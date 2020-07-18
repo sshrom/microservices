@@ -1,4 +1,9 @@
 # DevOps practice: Microservice architecture
+monitoring-2
+
+- cAdvisor
+- Grafana
+
 
 monitoring-1
 
