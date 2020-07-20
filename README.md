@@ -5,9 +5,15 @@ monitoring-2
 - Grafana
 
 
+monitoring-2
+
+- Визуализация на Grafana. Создание, импорт, экспорт дашбордов
+- Prometheus - Alertmanager c уведомлениями в Slack-канал
+- Контейнеры на Docker Hub https://hub.docker.com/u/sshrom
+
 monitoring-1
 
-- prometheus: запуск, конфигурация, знакомство с web ui
+- Prometheus: запуск, конфигурация, знакомство с web ui
 - Мониторинг состояния микросервисов
 - node-exporter для сбора информации Docker-хоста
 

@@ -33,5 +33,10 @@ gcloud compute firewall-rules create grafana3000 \
 --description="Allow 3000 Grafana" \
 --direction=INGRESS
 
+gcloud compute firewall-rules create node-exp-9100 \
+--allow tcp:9100 \
+--target-tags=docker-machine \
+--description="Allow 9100 NodeExporter" \
+--direction=INGRESS
 
 
