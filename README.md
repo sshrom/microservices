@@ -1,12 +1,8 @@
 # DevOps practice: Microservice architecture
+
 monitoring-2
 
 - cAdvisor
-- Grafana
-
-
-monitoring-2
-
 - Визуализация на Grafana. Создание, импорт, экспорт дашбордов
 - Prometheus - Alertmanager c уведомлениями в Slack-канал
 - Контейнеры на Docker Hub https://hub.docker.com/u/sshrom
