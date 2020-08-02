@@ -1,5 +1,11 @@
 # DevOps practice: Microservice architecture
 
+logging-1
+
+- Elasticsearch
+- Fluentd
+- Kibana
+
 monitoring-2
 
 - cAdvisor
