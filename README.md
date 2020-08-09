@@ -1,5 +1,11 @@
 # DevOps practice: Microservice architecture
 
+kubernetes-1
+
+- Практика со всеми компанентами Kubernetes. Разворачивание их вручную (The Hard Way).
+- https://github.com/kelseyhightower/kubernetes-the-hard-way
+- Ознакомление с описание основных примитивов приложения для дальнейшего запуска в Kubernetes.
+
 logging-1
 
 - Elasticsearch
