@@ -12,10 +12,23 @@ services:
           - comment_db
 
   ui:
-    #build: ./ui
+    #build: ./ui  
     image: ${DOCKERHUB_USERNAME}/ui:${IMG_VERSION}
+    environment:
+      - POST_SERVICE_HOST=post
+      - POST_SERVICE_PORT=5000
+      - COMMENT_SERVICE_HOST=comment
+      - COMMENT_SERVICE_PORT=9292
+      - ZIPKIN_ENABLED=${ZIPKIN_ENABLED}
     ports:
       - ${PUMA_PORT}:${PUMA_PORT}/tcp
+    depends_on:
+      - post
+    logging:
+      driver: "fluentd"
+      options:
+        fluentd-address: localhost:24224
+        tag: service.ui
     networks:
       - front_net
 
@@ -31,6 +44,7 @@ services:
     environment:
       - POST_DATABASE_HOST=post_db
       - POST_DATABASE=posts
+      - ZIPKIN_ENABLED=${ZIPKIN_ENABLED}
     # depends_on:
     #   - post_db
     ports:
@@ -48,6 +62,8 @@ services:
   comment:
     #build: ./comment
     image: ${DOCKERHUB_USERNAME}/comment:${IMG_VERSION}
+    environment:
+      - ZIPKIN_ENABLED=${ZIPKIN_ENABLED}
     networks:
       - back_net
       - front_net
