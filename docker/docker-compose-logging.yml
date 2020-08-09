@@ -25,9 +25,9 @@ services:
     ports:
       - "9411:9411"
     networks:
-      - back-net
-      - front-net
+      - back_net
+      - front_net
 
 networks:
-  front-net:
-  back-net:
+  front_net:
+  back_net:
