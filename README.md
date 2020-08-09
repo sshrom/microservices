@@ -5,6 +5,7 @@ logging-1
 - Elasticsearch
 - Fluentd
 - Kibana
+- Zipkin
 
 monitoring-2
 
