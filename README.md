@@ -26,7 +26,7 @@ monitoring-1
 - Мониторинг состояния микросервисов
 - node-exporter для сбора информации Docker-хоста
 
-github-ci-1
+gitlab-ci-1
 
 - Инсталляцию Gitlab CI (Omnibus) на GCE в Docker-контейнер
 - Установка и регистрация runner
